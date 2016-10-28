@@ -7,6 +7,11 @@
                 controller: 'NotesIndexController',
                 controllerAs: 'notesIndexController'
             })
+            .when('/notes/new', {
+                templateUrl: '/templates/pages/notes/new.html',
+                controller: 'NoteNewController',
+                controllerAs: 'noteNewController'
+            })
             .when('/notes/:id', {
                 templateUrl: '/templates/pages/notes/show.html',
                 controller: 'NoteShowController',

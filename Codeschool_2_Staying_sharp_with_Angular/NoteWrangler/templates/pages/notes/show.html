@@ -1,13 +1,13 @@
 <div class="card">
     <h1>
         <i class="{{note.icon}} icon left"></i>
-        <a ng-href="#/notes">NOTES ‹ </a>Note {{note.id}}: {{note.title}}
+        <a ng-href="#/notes">NOTES ‹ </a>Note {{noteShowController.note.id}}: {{noteShowController.note.title}}
     </h1>
 
-    <p>Created by: {{note.user.name || note.user.username}}</p>
-    <a ng-href="#/notes/{{note.id}}/edit" ng-if="currentUser.id === note.UserId" class="btn btn-danger">Edit Note</a>
-    <a ng-href="#/notes/{{note.id}}/delete" ng-if="currentUser.id === note.UserId" class="btn btn-danger">Delete</a>
+    <p>Created by: {{noteShowController.note.user.name || noteShowController.note.user.username}}</p>
+    <a ng-href="#/notes/{{noteShowController.note.id}}/edit" ng-if="currentUser.id && currentUser.id === noteShowController.note.UserId" class="btn btn-danger">Edit Note</a>
+    <a ng-href="#/notes/{{noteShowController.note.id}}/delete" ng-if="currentUser.id && currentUser.id === noteShowController.note.UserId" class="btn btn-danger">Delete</a>
 
     <h3>Description:</h3>
-    <p>{{note.description}}</p>
+    <p>{{noteShowController.note.description}}</p>
 </div>
