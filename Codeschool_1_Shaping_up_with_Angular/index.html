@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="store">
+    <head>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body ng-controller="StoreController as store">
+
+        <div ng-repeat="product in store.products">
+            <h2><product-title></product-title></h2>
+
+            <p product-description></p>
+            <p><img ng-src="{{product.images[0].full}}" width="100" /></p>
+            <button ng-show="product.canPurchase">Add to cart</button>
+
+            <product-panels></product-panels>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="products.js"></script>
+    </body>
+</html>

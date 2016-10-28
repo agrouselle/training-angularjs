@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Dodecahedron",
+    "price": 2.95,
+    "description": "A beautiful gem",
+    "canPurchase": true,
+    "soldOut": false,
+    "images": [
+      {
+        "full": "gem1.png"
+      }
+    ],
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "I love this product!",
+        "author": "john@doe.com"
+      },
+      {
+        "stars": 1,
+        "body": "I do not like this product",
+        "author": "tim@hater.com"
+      }
+    ]
+  },
+  {
+    "name": "Azurite",
+    "price": 1.20,
+    "description": "Another great gem",
+    "canPurchase": false,
+    "soldOut": false,
+    "images": [
+      {
+        "full": "gem2.png"
+      }
+    ]
+  }
+]

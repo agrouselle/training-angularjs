@@ -1,0 +1,15 @@
+body {
+    width: 20%;
+}
+
+input.ng-dirty.ng-invalid,
+select.ng-dirty.ng-invalid,
+textarea.ng-dirty.ng-invalid {
+    border: solid 1px red;
+}
+
+input.ng-dirty.ng-valid,
+select.ng-dirty.ng-valid,
+textarea.ng-dirty.ng-valid {
+    border: solid 1px green;
+}

@@ -1,0 +1,28 @@
+<div class="note-wrapper">
+
+    <div class="note-content">
+
+        <div class="notes-header">
+            <h1 title="Notes">Notes</h1>
+
+            <a class="btn-b" href='#/notes/new'>
+                <i class="icon add"></i>New Note
+            </a>
+        </div>
+
+        <div class="note-wrapper">
+            <a class="card-notes" ng-repeat="note in notesIndexController.notes" ng-href="/#/notes/{{note.id}}">
+
+                <div class="card card-block" title="{{note.title}}">
+                    <div ng-if="icon">
+                        <i class="icon icon-card {{note.icon}}"></i>
+                    </div>
+
+                    <h2 class="h3 card-title">{{note.title}}</h2>
+                </div>
+
+            </a>
+        </div>
+
+    </div>
+</div>

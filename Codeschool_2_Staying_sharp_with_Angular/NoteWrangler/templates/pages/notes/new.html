@@ -1,0 +1,43 @@
+<div class="new-note">
+    <div class="new-note-container">
+        <ul class='errors' ng-if="notesCreateCtrl.errors">
+            <li ng-repeat="error in notesCreateCtrl.errors">{{error}}</li>
+        </ul>
+
+        <form class="form">
+            <fieldset class="form-field">
+                <label class="form-label" for="header">Title</label>
+                <input class="form-input" id="header" name="header" ng-model="notesCreateCtrl.note.header" />
+            </fieldset>
+
+            <fieldset class="form-field">
+                <label class="form-label" for="category">Category</label>
+                <select name='category' id="category" name="category" ng-model='notesCreateCtrl.note.CategoryId' ng-options='category.id as category.name for category in categories'></select>
+            </fieldset>
+
+            <fieldset class="form-field">
+                <label class="form-label" for="link">Link</label>
+                <input class="form-input" id="link" name="link" ng-model="notesCreateCtrl.note.link" />
+            </fieldset>
+
+            <fieldset class="form-field">
+                <label class="form-label" for="icon"><i class="icon {{note.icon}}"></i>Icon</label>
+                <input class="form-input" id="icon" name="icon" ng-model="notesCreateCtrl.note.icon" />
+            </fieldset>
+
+            <fieldset class="form-field">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-input" id="description" name="description" ng-model="notesCreateCtrl.note.description" placeholder="A short description of this note"></textarea>
+            </fieldset>
+
+            <fieldset class="form-field">
+                <label class="form-label" for="content">Content</label>
+                <textarea class="form-input" id="content" name="content"  ng-model="notesCreateCtrl.note.content" placeholder="The meat of your note"></textarea>
+            </fieldset>
+
+            <button class="btn" ng-click="notesCreateCtrl.saveNote(note)" ng-disabled="notesCreateCtrl.updating">{{notesCreateCtrl.updating ? 'Saving...' : 'Save'}}</button>
+        </form>
+
+        <pre>{{notesCreateCtrl.note | json}}</pre>
+    </div>
+</div>

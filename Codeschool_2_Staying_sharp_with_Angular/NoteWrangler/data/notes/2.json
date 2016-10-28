@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "icon": null,
+  "title": "This is the note number 2",
+  "description": "Just another important note",
+  "user": {
+    "name": "Jane Doe"
+  }
+}
