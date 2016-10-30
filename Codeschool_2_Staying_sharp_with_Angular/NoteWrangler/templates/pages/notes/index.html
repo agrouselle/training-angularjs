@@ -14,7 +14,7 @@
             <a class="card-notes" ng-repeat="note in notesIndexController.notes | filter:search" ng-href="/#/notes/{{note.id}}">
 
                 <div class="card card-block" title="{{note.title}}">
-                    <div ng-if="icon">
+                    <div ng-if="note.icon">
                         <i class="icon icon-card {{note.icon}}"></i>
                     </div>
 

@@ -3,8 +3,6 @@
         .controller('NoteNewController', function($http){
             var controller = this;
 
-            controller.note = {};
-
             this.saveNote = function(note){
                 controller.errors = null;
 

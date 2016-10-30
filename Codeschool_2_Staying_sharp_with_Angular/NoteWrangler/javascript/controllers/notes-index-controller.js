@@ -2,6 +2,7 @@
     angular.module('NoteWrangler')
         .controller('NotesIndexController', function($http){
             var controller = this;
+            controller.notes = [];
 
             $http.get('/data/notes.json')
                 .success(function(data){
