@@ -11,13 +11,13 @@ angular.module('NoteWrangler')
             },
             link: function(scope, element, attrs){
                 scope.description = $sce.trustAsHtml(markdown.toHTML(scope.description));
-
-                $(element).find('a.see-description').click(function(){
-                    $(element).find('> p').toggleClass("hidden");
-                    console.log(attrs.icon);
-                    console.log(attrs.title);
-                    console.log(attrs.description);
-                });
+                
+                // $(element).find('a.see-description').click(function(){
+                //     $(element).find('> p').toggleClass("hidden");
+                //     console.log(attrs.icon);
+                //     console.log(attrs.title);
+                //     console.log(attrs.description);
+                // });
             }
         };
     }]);
