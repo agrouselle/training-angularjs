@@ -3,7 +3,7 @@
     "id": 1,
     "icon": null,
     "title": "This is a important note.",
-    "description": "This is the description of an important note.",
+    "description": "This is the description of an **important note**.",
     "user": {
       "name": "John Doe"
     }
@@ -13,7 +13,7 @@
     "id": 2,
     "icon": null,
     "title": "This is the note number 2",
-    "description": "Just another important note",
+    "description": "Just another **important note**",
     "user": {
       "name": "Jane Doe"
     }
@@ -23,7 +23,7 @@
     "id": 3,
     "icon": null,
     "title": "That note isn't so important",
-    "description": "Not an important note, whatever.",
+    "description": "Not an **important note**, whatever.",
     "user": {
       "username": "captainamerica"
     }

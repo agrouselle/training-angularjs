@@ -1,0 +1,10 @@
+<div class="card">
+    <h3>{{title}}</h3>
+    <i class="icon {{icon}}"></i>
+
+    <a class="see-description" href="javascript:void(0)">[See description]</a>
+    <a ng-href="#/notes/{{id}}/edit">[Edit]</a>
+</div>
+
+
+<p class="hidden" ng-bind-html="description">{{description}}</p>

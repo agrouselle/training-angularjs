@@ -11,16 +11,11 @@
         </div>
 
         <div class="note-wrapper">
-            <a class="card-notes" ng-repeat="note in notesIndexController.notes | filter:search" ng-href="/#/notes/{{note.id}}">
+            <a class="card-notes"
+               ng-repeat="note in notesIndexController.notes | filter:search"
+               ng-href="/#/notes/{{note.id}}">
 
-                <div class="card card-block" title="{{note.title}}">
-                    <div ng-if="note.icon">
-                        <i class="icon icon-card {{note.icon}}"></i>
-                    </div>
-
-                    <h2 class="h3 card-title">{{note.title}}</h2>
-                </div>
-
+                <nw-card title="note.title" icon="{{note.icon}}" description="note.description" id="note.id"></nw-card>
             </a>
         </div>
 

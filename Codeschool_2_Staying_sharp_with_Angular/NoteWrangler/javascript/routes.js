@@ -8,14 +8,19 @@
                 controllerAs: 'notesIndexController'
             })
             .when('/notes/new', {
-                templateUrl: '/templates/pages/notes/new.html',
-                controller: 'NoteNewController',
-                controllerAs: 'noteNewController'
+                templateUrl: '/templates/pages/notes/edit.html',
+                controller: 'NotesEditController',
+                controllerAs: 'notesEditController'
             })
             .when('/notes/:id', {
                 templateUrl: '/templates/pages/notes/show.html',
                 controller: 'NoteShowController',
                 controllerAs: 'noteShowController'
+            })
+            .when('/notes/:id/edit', {
+                templateUrl: '/templates/pages/notes/edit.html',
+                controller: 'NotesEditController',
+                controllerAs: 'notesEditController'
             })
             .when('/users', {
                 templateUrl: '/templates/pages/users/index.html',
@@ -24,5 +29,4 @@
             })
             .otherwise({redirectTo: '/notes'});
     });
-
 }());
