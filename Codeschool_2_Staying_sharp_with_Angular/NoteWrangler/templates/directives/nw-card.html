@@ -1,9 +1,9 @@
 <div class="card">
-    <h3>{{title}}</h3>
-    <i class="icon {{icon}}"></i>
+    <h3><img src="{{icon}}" /> {{title}}</h3>
+
 
     <a ng-click="showDescription = !showDescription" class="see-description">[See description]</a>
-    <a ng-href="#/notes/{{id}}/edit">[Edit]</a>
+    <a ng-href="#/{{type}}s/{{id}}/edit">[Edit]</a>
 </div>
 
 <p ng-show="showDescription" ng-bind-html="description"></p>

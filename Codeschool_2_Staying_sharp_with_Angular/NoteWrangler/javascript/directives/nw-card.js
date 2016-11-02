@@ -4,14 +4,15 @@ angular.module('NoteWrangler')
             restrict: 'E',
             templateUrl: 'templates/directives/nw-card.html',
             scope: {
-                icon: '@',
+                icon: '=',
                 title: '=',
                 description: '=',
-                id: '='
+                id: '=',
+                type: '@'
             },
             link: function(scope, element, attrs){
                 scope.description = $sce.trustAsHtml(markdown.toHTML(scope.description));
-                
+
                 // $(element).find('a.see-description').click(function(){
                 //     $(element).find('> p').toggleClass("hidden");
                 //     console.log(attrs.icon);

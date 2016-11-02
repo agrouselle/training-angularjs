@@ -3,16 +3,13 @@
 
     <div class="users-wrapper">
         <a class="card-users" ng-repeat="user in users | filter:search" ng-href="#/users/{{user.id}}">
-
-            <div class="card" title="{{user.name}}">
-                <h2 class="h3">{{user.name}}</h2>
-                <p>{{note.bio}}</p>
-            </div>
-
-            <!--
-            <nw-card card-title="user.name" image='gravatarUrl(user)' body="user.bio" id="user.id" type="{{user.username}}"></nw-card>
-            -->
-
+            <nw-card
+                    title="user.name"
+                    icon="gravatarUrl(user.email)"
+                    description="user.bio"
+                    id="user.id"
+                    type="user"
+            ></nw-card>
         </a>
     </div>
 </div>

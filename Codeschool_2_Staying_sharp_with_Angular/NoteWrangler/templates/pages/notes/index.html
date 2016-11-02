@@ -2,6 +2,8 @@
 
     <div class="note-content">
 
+        <nw-category-select active-category="activeCategory"></nw-category-select>
+
         <div class="notes-header">
             <h1 title="Notes">Notes</h1>
 
@@ -12,10 +14,16 @@
 
         <div class="note-wrapper">
             <a class="card-notes"
-               ng-repeat="note in notesIndexController.notes | filter:search"
+               ng-repeat="note in notes | filter:search | filter:{category:{name: activeCategory.name}}"
                ng-href="/#/notes/{{note.id}}">
 
-                <nw-card title="note.title" icon="{{note.icon}}" description="note.description" id="note.id"></nw-card>
+                <nw-card
+                        title="note.title"
+                        icon="note.icon"
+                        description="note.description"
+                        id="note.id"
+                        type="note"
+                ></nw-card>
             </a>
         </div>
 
